@@ -23,6 +23,19 @@ describe Parser do
       expect(parser.users.first.reported?).to eq true
     end
 
+    it "should block and report multiple users" do
+      parser = Parser.new("+b @butthead +r @spammer +br @abuser")
+
+      expect(parser.users[0].blocked?).to eq true
+      expect(parser.users[0].reported?).to eq false
+
+      expect(parser.users[1].blocked?).to eq false
+      expect(parser.users[1].reported?).to eq true
+
+      expect(parser.users[2].blocked?).to eq true
+      expect(parser.users[2].reported?).to eq true
+    end
+
     it "should not touch users without modes" do
       parser = Parser.new("+br @abuser @cool_dude")
       expect(parser.users.last.handle).to eq "cool_dude"
