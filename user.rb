@@ -32,6 +32,12 @@ class User
     !@modes.match(/r/).nil?
   end
 
+  def puts_status
+    puts "#{handle}'s modes: #{modes}"
+    puts "#{handle} is blocked." if blocked?
+    puts "#{handle} is reported." if reported?
+  end
+
   private
 
   def block

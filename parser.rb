@@ -12,9 +12,7 @@ class Parser
   def puts_statuses
     @users.each do |u|
       puts
-      puts "#{u.handle}'s modes: #{u.modes}"
-      puts "#{u.handle} is blocked." if u.blocked?
-      puts "#{u.handle} is reported." if u.reported?
+      u.puts_status
     end
   end
 
