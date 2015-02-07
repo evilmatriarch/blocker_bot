@@ -10,19 +10,25 @@ class User
   end
 
   def block!
-    @modes += "b" unless blocked?
+    return true if blocked?
+
+    @modes += "b"
+    block
   end
 
   def blocked?
-    @modes.match(/b/)
+    !@modes.match(/b/).nil?
   end
 
   def report!
-    @modes += "r" unless reported?
+    return true if reported?
+
+    @modes += "r"
+    report
   end
 
   def reported?
-    @modes.match(/r/)
+    !@modes.match(/r/).nil?
   end
 
   private
