@@ -1,0 +1,11 @@
+# Blocker bot
+
+This is just a spike for a hypothetical blocker bot that could one day turn real. Based on the [original idea](https://twitter.com/GOLDIE_ice/status/563815030714408961) from @[GOLDIE-ice-COLD](https://github.com/GOLDIE-ice-COLD).
+
+## Installation
+
+Clone the repo, `cd` into it, and run `bundle`.
+
+## Running specs
+
+This project uses [RSpec](http://rspec.info). Run `bundle exec rspec specs/` to run all the tests.
