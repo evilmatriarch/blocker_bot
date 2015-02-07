@@ -22,4 +22,4 @@ In the future, this will be connected to a Twitter bot that accepts commands.
 
 ## Running specs
 
-This project uses [RSpec](http://rspec.info). Run `bundle exec rspec specs/` to run all the tests.
+This project uses [RSpec](http://rspec.info). Run `bundle exec rspec` to run all the tests.
