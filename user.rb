@@ -6,6 +6,7 @@ class User
     @modes = modes
     @handle = handle
 
+    normalize_handle
     process_modes
   end
 
@@ -41,6 +42,10 @@ class User
   def report
     # here, you'd actually report the user
     puts "Reported #{handle}."
+  end
+
+  def normalize_handle
+    @handle.slice!(/^@/)
   end
 
   def process_modes

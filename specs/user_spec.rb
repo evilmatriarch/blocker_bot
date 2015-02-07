@@ -7,6 +7,11 @@ describe User do
       expect(user.handle).to eq "awesome"
     end
 
+    it "should normalize handles" do
+      user = User.new("@awesome")
+      expect(user.handle).to eq "awesome"
+    end
+
     it "should be able to block from modes" do
       user = User.new("awesome", "+b")
       expect(user.blocked?).to eq true
