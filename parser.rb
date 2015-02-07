@@ -1,6 +1,6 @@
 require "./user"
 
-class Blocker
+class Parser
   attr_reader :users
 
   def initialize(tweet_text)
