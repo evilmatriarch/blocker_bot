@@ -6,6 +6,20 @@ This is just a spike for a hypothetical blocker bot that could one day turn real
 
 Clone the repo, `cd` into it, and run `bundle`.
 
+## Usage
+
+In the future, this will be connected to a Twitter bot that accepts commands.
+
+### Syntax
+
+    @<blockbot> +[br] <username> [...]
+
+### Options
+
+    +b -- block the user.
+
+    +r -- report the user.
+
 ## Running specs
 
 This project uses [RSpec](http://rspec.info). Run `bundle exec rspec specs/` to run all the tests.
